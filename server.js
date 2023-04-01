@@ -17,4 +17,7 @@ app.use(cors())
 const pacientesRouter = require('./rutas/pacientes')
 app.use('/pacientes', pacientesRouter)
 
+const registrosRouter = require('./rutas/registros')
+app.use('/registros', registrosRouter)
+
 app.listen(5000, () => console.log('Servidor iniciado'))
