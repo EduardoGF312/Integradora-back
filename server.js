@@ -2,6 +2,7 @@ require('dotenv').config()
 let cors = require('cors')
 const express = require('express')
 const app = express()
+const port = process.env.PORT || 5000;
 const mongoose = require('mongoose')
 
 mongoose.set('strictQuery', false) //Evitar el mensaje de deprecación
@@ -20,4 +21,4 @@ app.use('/pacientes', pacientesRouter)
 const registrosRouter = require('./rutas/registros')
 app.use('/registros', registrosRouter)
 
-app.listen(5000, () => console.log('Servidor iniciado'))
+app.listen(port, () => console.log('Servidor iniciado en el puerto', port))

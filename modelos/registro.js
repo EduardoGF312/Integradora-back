@@ -2,7 +2,8 @@ const mongoose = require('mongoose')
 
 const registroSchema = new mongoose.Schema({
     fecha: String,
-    alumno: String,
+    nombre: String,
+    apellido: String,
     oximetria: Number,
     frecuencia: Number,
     // temperatura: Number,
