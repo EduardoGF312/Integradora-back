@@ -4,7 +4,7 @@ const router = express.Router()
 
 router.post('/', async(req, res) =>{
 
-    const {fecha, nombre, apellido, oximetria, frecuencia,  observaciones} = req.body
+    const {fecha, nombre, apellido, oximetria, frecuencia,  temperatura, observaciones} = req.body
 
     const registro = new Registro({
         fecha: fecha,
@@ -12,6 +12,7 @@ router.post('/', async(req, res) =>{
         apellido: apellido,
         oximetria: oximetria,
         frecuencia: frecuencia,
+        temperatura: temperatura,
         observaciones: observaciones
     })
     try {

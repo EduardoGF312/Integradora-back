@@ -6,7 +6,7 @@ const registroSchema = new mongoose.Schema({
     apellido: String,
     oximetria: Number,
     frecuencia: Number,
-    // temperatura: Number,
+    temperatura: Number,
     observaciones: String
 })
 
